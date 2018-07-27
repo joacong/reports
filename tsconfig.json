@@ -11,12 +11,10 @@
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
     "noImplicitAny": false,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "strictNullChecks": false
   },
   "exclude": [
     "node_modules",
