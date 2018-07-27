@@ -11,5 +11,6 @@ const logger = process.env.NODE_ENV == "development" ?
                } :
                store => next => action => {};
 
+let store = createStore(reducer, compose(applyMiddleware(thunk, logger)));
 
-export default store = createStore(reducer, compose(applyMiddleware(thunk, logger)));
+export default store;
