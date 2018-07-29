@@ -42,41 +42,25 @@
   font-size: 5em;
 }
 
-.Board__icon-blue {
+.Board__icon {
   position: absolute;
+  color: #fff;
+  font-size: 1.2em;
+  top: -1rem;
+  left: 0;
+  padding: 0.8rem;
+  margin-left: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.Board__icon.-blue {
   background: #81d4fa;
-  color: #fff;
-  font-size: 1.2em;
-  top: -1rem;
-  left: 0;
-  padding: 0.8rem;
-  margin-left: 0.3rem;
-  border-radius: 0.3rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.Board__icon-teal {
-  position: absolute;
+.Board__icon.-teal {
   background: #80cbc4;
-  color: #fff;
-  font-size: 1.2em;
-  top: -1rem;
-  left: 0;
-  padding: 0.8rem;
-  margin-left: 0.3rem;
-  border-radius: 0.3rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.Board__icon-green {
-  position: absolute;
+.Board__icon.-green {
   background: #a5d6a7;
-  color: #fff;
-  font-size: 1.2em;
-  top: -1rem;
-  left: 0;
-  padding: 0.8rem;
-  margin-left: 0.3rem;
-  border-radius: 0.3rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }

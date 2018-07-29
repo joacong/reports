@@ -47,7 +47,7 @@ export const BoardList = (props) => {
                               <div className="Board__quantity">
                                 {quantity}
                               </div>
-                              <span className={`Board__icon-${getIcon(board.name).color}`}>
+                              <span className={`Board__icon -${getIcon(board.name).color}`}>
                                 {getIcon(board.name).icon}
                               </span>
                             </div>
@@ -66,7 +66,7 @@ export const BoardList = (props) => {
                               <div className="Board__quantity">
                                 {quantity}
                               </div>
-                              <span className={`Board__icon-${getIcon(board.name).color}`}>
+                              <span className={`Board__icon -${getIcon(board.name).color}`}>
                                 {getIcon(board.name).icon}
                               </span>
                             </div>
