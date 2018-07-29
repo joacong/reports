@@ -7,6 +7,24 @@ export const BoardList = (props) => {
     return name.replace("Backlog", "backLog").replace("In Development", "inDevelopment").replace("Done", "done");
   }
 
+  const getIcon = (name) => {
+    let k = getKey(name);
+    return {
+      backLog: {
+        icon: <i className="fa fa-calendar" aria-hidden="true"></i>,
+        color: "blue"
+      },
+      inDevelopment: {
+        icon: <i className="fa fa-code" aria-hidden="true"></i>,
+        color: "teal"
+      },
+      done: {
+        icon: <i className="fa fa-check" aria-hidden="true"></i>,
+        color: "green"
+      }
+    }[k]
+  }
+
   let { boards, listChecked, cardList } = props;
   let body =  <div className="Board__list">
                 <div className="Board__section">
@@ -29,6 +47,9 @@ export const BoardList = (props) => {
                               <div className="Board__quantity">
                                 {quantity}
                               </div>
+                              <span className={`Board__icon-${getIcon(board.name).color}`}>
+                                {getIcon(board.name).icon}
+                              </span>
                             </div>
                   })
                 }
@@ -45,6 +66,9 @@ export const BoardList = (props) => {
                               <div className="Board__quantity">
                                 {quantity}
                               </div>
+                              <span className={`Board__icon-${getIcon(board.name).color}`}>
+                                {getIcon(board.name).icon}
+                              </span>
                             </div>
                   })
                 }

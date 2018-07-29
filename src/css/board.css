@@ -10,7 +10,7 @@
   padding: 0 1rem;
   font-size: 1.4em;
   border-bottom: 1px solid rgba(0,0,0,.2)
-  
+
 }
 
 .Board__item {
@@ -40,4 +40,43 @@
   font-weight: 800;
   flex: 2 1 auto;  
   font-size: 5em;
+}
+
+.Board__icon-blue {
+  position: absolute;
+  background: #81d4fa;
+  color: #fff;
+  font-size: 1.2em;
+  top: -1rem;
+  left: 0;
+  padding: 0.8rem;
+  margin-left: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.Board__icon-teal {
+  position: absolute;
+  background: #80cbc4;
+  color: #fff;
+  font-size: 1.2em;
+  top: -1rem;
+  left: 0;
+  padding: 0.8rem;
+  margin-left: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.Board__icon-green {
+  position: absolute;
+  background: #a5d6a7;
+  color: #fff;
+  font-size: 1.2em;
+  top: -1rem;
+  left: 0;
+  padding: 0.8rem;
+  margin-left: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
