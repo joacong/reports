@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getListChecked } from '../../data/listChecked/actions';
 import { getCardList } from '../../data/cardList/actions';
 import { Graphics } from '../components';
+import { getBoardList } from '../../boards/actions';
 
 class GrapgicsContainer extends React.Component<any,any> {
   constructor(props) {
@@ -10,9 +11,19 @@ class GrapgicsContainer extends React.Component<any,any> {
   }
 
   componentDidMount() {
-    let { getCardList, getListChecked } = this.props;
+    let { getCardList, getListChecked, getBoardList } = this.props;
     getCardList();
     getListChecked();
+    getBoardList();
+    setInterval(() => {
+      let icon = document.getElementById("refresh");
+      let className = icon.className;
+      icon.className = `${className} animated rotateIn`;
+      getCardList();
+      setTimeout(() => {
+        icon.className = className;
+      }, 2000)
+    }, 5000)
   }
 
   render() {
@@ -24,9 +35,11 @@ class GrapgicsContainer extends React.Component<any,any> {
 
 const mapStateToProps = state => {
   let { listChecked, cardList } = state.data;
+  let { boards } = state;
   return {
     listChecked,
-    cardList
+    cardList,
+    boards
   }
 }
 
@@ -37,6 +50,9 @@ const mapDispatchToProps = dispatch => {
     },
     getCardList() {
       dispatch(getCardList());
+    },
+    getBoardList() {
+      dispatch(getBoardList());
     }
   }
 }
