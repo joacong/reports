@@ -1,0 +1,23 @@
+.navbar {
+  flex: 1 1 auto;
+  max-height: 4rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.brand-logo {
+  flex: 1 1 90%;
+  height: 100%;
+}
+
+.brand-logo h3 {
+  font-size: 2em;
+  padding-left: 10px;
+  color: #757575;
+  letter-spacing: 2px;
+}
+
+.nav-icon {
+  flex: 1 1 10%;
+}

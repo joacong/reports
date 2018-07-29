@@ -1,0 +1,16 @@
+.AppContent {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.AppContent__body {
+  flex: 1 1 auto;
+  padding: 1rem 2rem;
+}
+
+.LoadingBar {
+  top: 0px;
+  right: 0px;
+  background: #1de9b6;
+}

@@ -1,13 +1,19 @@
 import * as React from 'react';
-import './App.css';
-import BoardListContainer from './boards/containers/BoardListContainer';
 
-import logo from './logo.svg';
+import { SideBar, Main } from './layout';
+import {
+  BrowserRouter as Router
+} from 'react-router-dom'
 
 class App extends React.Component {
   public render() {
     return (
-      <BoardListContainer />
+      <Router>
+        <div>
+          <SideBar />
+          <Main />
+        </div>
+      </Router>
     );
   }
 }

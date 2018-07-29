@@ -1,7 +1,59 @@
 import * as React from 'react';
+import { AppContent } from '../../components';
+import * as moment from 'moment';
 
 export const BoardList = (props) => {
+  const getKey = (name) => {
+    return name.replace("Backlog", "backLog").replace("In Development", "inDevelopment").replace("Done", "done");
+  }
+
+  let { boards, listChecked, cardList } = props;
+  let body =  <div className="Board__list">
+                <div className="Board__section">
+                  Movimientos ultimo día
+                </div>
+                {
+                  boards.map((board, i) => {
+                    let quantity = listChecked[getKey(board.name)].filter(card => {
+                      let { data, date } = card;
+                      let { listAfter } = data;
+                      let now = moment();
+                      let update = moment(date);
+                      let diff = now.diff(update, 'days');
+                      return diff > 0 && diff <= 1 && listAfter.id == board.id;
+                    }).length;
+                    return  <div className="Board__item" key={i}>
+                              <span className="Board__title">
+                                {board.name}
+                              </span>
+                              <div className="Board__quantity">
+                                {quantity}
+                              </div>
+                            </div>
+                  })
+                }
+                <div className="Board__section">
+                  Cantidad de tareas por lista
+                </div>
+                {
+                  boards.map((board, i) => {
+                    let quantity = cardList.filter(card => card.idList == board.id).length
+                    return  <div className="Board__item" key={i}>
+                              <span className="Board__title">
+                                {board.name}
+                              </span>
+                              <div className="Board__quantity">
+                                {quantity}
+                              </div>
+                            </div>
+                  })
+                }
+              </div>;
+  let title = "Resumenes";
   return(
-    <div> <h1>BoardList</h1> </div>
+    <AppContent
+      header={{title}}
+      body={body}
+    />
   )
 }

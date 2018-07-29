@@ -1,1 +1,3 @@
 export const GET_BOARD_LIST = 'GET_BOARD_LIST';
+export const GET_LIST_CHECKED = 'GET_LIST_CHECKED';
+export const GET_CARD_LIST = 'GET_CARD_LIST';
